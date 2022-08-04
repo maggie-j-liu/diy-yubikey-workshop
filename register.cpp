@@ -30,6 +30,12 @@ void handle_register()
 
 	// STEP 4: compute the public key from the private key
 	// initialize the public key as an array with length 65, and add the 0x04 byte at the beginning because uECC_compute_public_key doesn't
+	/*
+	 * use the uECC_compute_public_key function with the following parameters
+	 * private key buffer
+	 * public key buffer
+	 * curve (uECC_secp256r1)
+	 */
 
 	// STEP 5: run the application param and the newly generated private key and run them through hmac-sha256 again, using the same master key
 	// the result is the MAC used in the key handle
@@ -65,6 +71,14 @@ void handle_register()
 	// get the hash
 
 	// STEP 6.2: sign the hash with the private key from the attestation certificate
+	/*
+	 * use the uECC_sign function, with the following parameters
+	 * private key
+	 * message hash
+	 * size of message hash
+	 * signature buffer
+	 * curve (uECC_secp256r1)
+	 */
 
 	// STEP 6.3: put signature in correct format
 
