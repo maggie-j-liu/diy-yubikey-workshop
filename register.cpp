@@ -73,7 +73,7 @@ void handle_register()
 	// STEP 6.2: sign the hash with the private key from the attestation certificate
 	/*
 	 * use the uECC_sign function, with the following parameters
-	 * private key
+	 * private key (ATTESTATION_KEY)
 	 * message hash
 	 * size of message hash
 	 * signature buffer
